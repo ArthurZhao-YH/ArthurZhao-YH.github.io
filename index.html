@@ -254,6 +254,7 @@
         .hero-visual {
             position: relative;
             overflow: hidden;
+            margin: 0;
             aspect-ratio: 0.84;
             min-height: 460px;
             border: 1px solid var(--line);
@@ -507,6 +508,10 @@
             color: inherit;
         }
 
+        .project-image-link {
+            display: block;
+        }
+
         .project-visual {
             position: relative;
             overflow: hidden;
@@ -588,6 +593,10 @@
             object-fit: cover;
             object-position: center;
             transition: transform 220ms ease;
+        }
+
+        .sph-cover img {
+            object-position: center bottom;
         }
 
         .project-card:hover .project-cover img {
@@ -1063,29 +1072,27 @@
                         </article>
 
                         <article class="project-card" data-category="renderman">
-                            <div class="project-visual" aria-hidden="true">
-                                <span class="ray" style="--angle: -26deg;"></span>
-                                <span class="ray" style="--angle: 16deg;"></span>
-                                <span class="node one"></span>
-                                <span class="node two"></span>
-                            </div>
+                            <a class="project-image-link" href="https://github.com/ArthurZhao-YH/Renderman" target="_blank" rel="noreferrer" aria-label="View RenderMan Glass Still Life on GitHub">
+                                <div class="project-visual project-cover">
+                                    <img src="assets/renderman-glass-still-life.jpg" alt="RenderMan glass still life with glass cup, reflective cube, and shallow depth of field.">
+                                </div>
+                            </a>
                             <div class="project-body">
                                 <p class="project-meta">RenderMan | Shading</p>
                                 <h3>RenderMan Glass Still Life</h3>
-                                <p>A material and lighting study focused on glass, reflections, refractions, and controlled still-life composition.</p>
+                                <p>在renderman,使用python和osl语言进行玻璃静物渲染研究.</p>
                                 <div class="tag-list"><span>Lighting</span><span>Materials</span><span>Lookdev</span></div>
                             </div>
                         </article>
 
                         <article class="project-card" data-category="simulation">
-                            <div class="project-visual" aria-hidden="true">
-                                <span class="ray" style="--angle: -12deg;"></span>
-                                <span class="ray" style="--angle: 18deg;"></span>
-                                <span class="node one"></span>
-                                <span class="node two"></span>
-                            </div>
+                            <a class="project-image-link" href="https://github.com/ArthurZhao-YH/Simulation_SPH" target="_blank" rel="noreferrer" aria-label="View SPH Fluid Simulation on GitHub">
+                                <div class="project-visual project-cover sph-cover">
+                                    <img src="assets/sph-simulation-cover.png" alt="SPH fluid simulation particle render.">
+                                </div>
+                            </a>
                             <div class="project-body">
-                                <p class="project-meta">Simulation | C++</p>
+                                <p class="project-meta">Simulation | Python</p>
                                 <h3>SPH Fluid Simulation</h3>
                                 <p>A particle-based fluid simulation project exploring neighborhood search, integration, density, and visual presentation.</p>
                                 <div class="tag-list"><span>SPH</span><span>Physics</span><span>Particles</span></div>
@@ -1100,7 +1107,7 @@
                                 <div class="project-body">
                                     <p class="project-meta">NPR | Shader Controls | GitHub</p>
                                     <h3>Project Arthur - Painterly Renderer</h3>
-                                    <p>An ASE NPR shader project with painterly post effects, paper grain, brush radius controls, lighting controls, and model/texture switching for stylized rendering tests.</p>
+                                    <p>An NPR shader project.</p>
                                     <div class="tag-list"><span>NPR</span><span>Shaders</span><span>Painterly</span><span>WebGL</span></div>
                                     <span class="project-action">View on GitHub</span>
                                 </div>
