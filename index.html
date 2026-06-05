@@ -493,8 +493,18 @@
             transition: opacity 180ms ease, transform 180ms ease;
         }
 
+        .project-card:hover {
+            transform: translateY(-3px);
+        }
+
         .project-card.is-hidden {
             display: none;
+        }
+
+        .project-link {
+            display: block;
+            height: 100%;
+            color: inherit;
         }
 
         .project-visual {
@@ -567,6 +577,23 @@
             --accent: var(--gold);
         }
 
+        .project-cover::before,
+        .project-cover::after {
+            content: none;
+        }
+
+        .project-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 220ms ease;
+        }
+
+        .project-card:hover .project-cover img {
+            transform: scale(1.035);
+        }
+
         .project-body {
             padding: 20px;
         }
@@ -585,6 +612,21 @@
             color: var(--muted);
             font-size: 0.76rem;
             font-weight: 800;
+        }
+
+        .project-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            color: var(--teal);
+            font-size: 0.84rem;
+            font-weight: 800;
+        }
+
+        .project-action::after {
+            content: "->";
+            font-size: 0.92rem;
         }
 
         .contact-grid {
@@ -1051,18 +1093,18 @@
                         </article>
 
                         <article class="project-card" data-category="npr">
-                            <div class="project-visual" aria-hidden="true">
-                                <span class="ray" style="--angle: -30deg;"></span>
-                                <span class="ray" style="--angle: 4deg;"></span>
-                                <span class="node one"></span>
-                                <span class="node two"></span>
-                            </div>
-                            <div class="project-body">
-                                <p class="project-meta">NPR | Shaders</p>
-                                <h3>ASE NPR Renderer</h3>
-                                <p>A non-photorealistic rendering study with shader-driven style controls for edges, tones, and graphic surface treatment.</p>
-                                <div class="tag-list"><span>NPR</span><span>Shaders</span><span>Rendering</span></div>
-                            </div>
+                            <a class="project-link" href="https://github.com/NCCA/aseassignment25-26-ArthurZhao-YH" target="_blank" rel="noreferrer" aria-label="View Project Arthur Painterly Renderer on GitHub">
+                                <div class="project-visual project-cover">
+                                    <img src="assets/npr-painterly-renderer.png" alt="Project Arthur painterly renderer showing two translucent vases with shader controls.">
+                                </div>
+                                <div class="project-body">
+                                    <p class="project-meta">NPR | Shader Controls | GitHub</p>
+                                    <h3>Project Arthur - Painterly Renderer</h3>
+                                    <p>An ASE NPR shader project with painterly post effects, paper grain, brush radius controls, lighting controls, and model/texture switching for stylized rendering tests.</p>
+                                    <div class="tag-list"><span>NPR</span><span>Shaders</span><span>Painterly</span><span>WebGL</span></div>
+                                    <span class="project-action">View on GitHub</span>
+                                </div>
+                            </a>
                         </article>
                     </div>
                 </div>
