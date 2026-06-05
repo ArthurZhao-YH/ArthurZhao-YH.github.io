@@ -325,6 +325,10 @@
             align-items: start;
         }
 
+        .about-layout {
+            max-width: 740px;
+        }
+
         .copy-stack {
             display: grid;
             gap: 18px;
@@ -336,34 +340,6 @@
             margin: 0;
         }
 
-        .info-list {
-            display: grid;
-            gap: 10px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .info-list li {
-            display: grid;
-            grid-template-columns: 106px 1fr;
-            gap: 14px;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .info-list span {
-            color: var(--muted);
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        .info-list strong {
-            font-size: 0.98rem;
-        }
-
-        .highlight-grid,
         .project-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -371,7 +347,6 @@
             margin-top: 34px;
         }
 
-        .highlight-card,
         .project-card,
         .timeline-item,
         .skill-card {
@@ -381,11 +356,6 @@
             box-shadow: 0 12px 26px rgba(28, 35, 45, 0.05);
         }
 
-        .highlight-card {
-            padding: 22px;
-        }
-
-        .highlight-card h3,
         .project-card h3,
         .timeline-item h3,
         .skill-card h3 {
@@ -394,7 +364,6 @@
             letter-spacing: 0;
         }
 
-        .highlight-card p,
         .project-card p,
         .timeline-item p {
             margin: 0;
@@ -818,7 +787,6 @@
                 font-size: clamp(2.5rem, 15vw, 4.2rem);
             }
 
-            .highlight-grid,
             .project-grid,
             .skills {
                 grid-template-columns: 1fr;
@@ -857,11 +825,6 @@
                 gap: 8px;
             }
 
-            .info-list li {
-                grid-template-columns: 1fr;
-                gap: 4px;
-            }
-
             .contact-form {
                 padding: 18px;
             }
@@ -876,7 +839,7 @@
                     <canvas id="portraitCanvas" width="320" height="320"></canvas>
                 </div>
                 <div>
-                    <h1>Arthur Zhao</h1>
+                    <h1>Yinghao Zhao</h1>
                     <p>MSc Computer Animation and Visual Effects student focused on rendering, shaders, tools, and real-time worlds.</p>
                 </div>
                 <span class="status-chip">Open to CG and VFX roles</span>
@@ -897,7 +860,7 @@
             <section class="section hero" id="home">
                 <div class="hero-copy">
                     <p class="eyebrow">Rendering | Technical Art | Real-time Graphics</p>
-                    <h2>Arthur Zhao</h2>
+                    <h2>Yinghao Zhao</h2>
                     <p class="lead">I build graphics projects at the intersection of computer animation, visual effects, real-time shaders, simulation, and artist-friendly production tools.</p>
                     <div class="button-row">
                         <a class="button" href="#portfolio">View Work</a>
@@ -932,37 +895,12 @@
                 <div class="section-inner">
                     <p class="eyebrow">About Me</p>
                     <h2 class="section-title small">Programmer, renderer, and technical artist.</h2>
-                    <div class="split">
+                    <div class="about-layout">
                         <div class="copy-stack">
                             <p>I am an MSc Computer Animation and Visual Effects student at Bournemouth University with interests in computer graphics, non-photorealistic rendering, real-time shaders, game development, animation, and visual effects.</p>
                             <p>My current work is shaped by both technical implementation and visual problem solving: building tools, studying rendering techniques, prototyping interactive scenes, and turning graphics ideas into usable experiences.</p>
                             <p>I enjoy projects where code needs to support artists and designers, especially workflows that combine engines, shaders, simulation, and production-friendly interfaces.</p>
                         </div>
-                        <ul class="info-list" aria-label="Profile facts">
-                            <li><span>Location</span><strong>Bournemouth, United Kingdom</strong></li>
-                            <li><span>Education</span><strong>MSc Computer Animation and Visual Effects</strong></li>
-                            <li><span>Focus</span><strong>Rendering, simulation, shaders, tools</strong></li>
-                            <li><span>Email</span><strong><a href="mailto:your-email@example.com">your-email@example.com</a></strong></li>
-                        </ul>
-                    </div>
-
-                    <div class="highlight-grid">
-                        <article class="highlight-card">
-                            <h3>Rendering Research</h3>
-                            <p>Exploring visual style, shading, sampling, and image formation through RenderMan, engine work, and custom graphics experiments.</p>
-                        </article>
-                        <article class="highlight-card">
-                            <h3>Real-time Worlds</h3>
-                            <p>Building interactive Unreal Engine scenes that connect visual design, material work, gameplay logic, and VR-ready environments.</p>
-                        </article>
-                        <article class="highlight-card">
-                            <h3>Technical Tools</h3>
-                            <p>Designing small production tools that help artists test variants, manage assets, and move faster inside engine workflows.</p>
-                        </article>
-                        <article class="highlight-card">
-                            <h3>Simulation</h3>
-                            <p>Implementing physical and procedural systems, including particle-based fluid simulation and graphics-focused numerical experiments.</p>
-                        </article>
                     </div>
                 </div>
             </section>
@@ -998,10 +936,6 @@
 
                         <div class="skills" aria-label="Skills">
                             <article class="skill-card">
-                                <div class="skill-row"><h3>C++</h3><span>82%</span></div>
-                                <div class="bar"><i style="--value: 82%;"></i></div>
-                            </article>
-                            <article class="skill-card">
                                 <div class="skill-row"><h3>Python</h3><span>80%</span></div>
                                 <div class="bar"><i style="--value: 80%;"></i></div>
                             </article>
@@ -1010,12 +944,16 @@
                                 <div class="bar"><i style="--value: 85%;"></i></div>
                             </article>
                             <article class="skill-card">
-                                <div class="skill-row"><h3>RenderMan</h3><span>78%</span></div>
-                                <div class="bar"><i style="--value: 78%;"></i></div>
+                                <div class="skill-row"><h3>RenderMan</h3><span>70%</span></div>
+                                <div class="bar"><i style="--value: 70%;"></i></div>
                             </article>
                             <article class="skill-card">
-                                <div class="skill-row"><h3>Maya</h3><span>72%</span></div>
-                                <div class="bar"><i style="--value: 72%;"></i></div>
+                                <div class="skill-row"><h3>Unity</h3><span>70%</span></div>
+                                <div class="bar"><i style="--value: 70%;"></i></div>
+                            </article>
+                            <article class="skill-card">
+                                <div class="skill-row"><h3>Maya</h3><span>90%</span></div>
+                                <div class="bar"><i style="--value: 90%;"></i></div>
                             </article>
                             <article class="skill-card">
                                 <div class="skill-row"><h3>Houdini</h3><span>68%</span></div>
